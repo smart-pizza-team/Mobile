@@ -1,5 +1,12 @@
 import React, { useState }  from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, TextInput, StyleSheet} from 'react-native'
+import { 
+  View, 
+  Text, 
+  SafeAreaView, 
+  TouchableOpacity, 
+  TextInput, 
+  StyleSheet,
+  Image,} from 'react-native'
 
 import { useNavigation } from '@react-navigation/native'
 
@@ -34,10 +41,21 @@ export default function Dashboard(){
 
   return(
     <SafeAreaView style={styles.container}>
-        <Text style={styles.title}>Novo pedido</Text>
+        <Text 
+        style={{
+          color:'#FFF',
+          fontWeight: 'bold',
+          fontSize: 28,
+          alignSelf: 'flex-start',
+          paddingHorizontal: 20,
+          marginTop: 30
+          }}>Pedidos</Text>
+      
+      <View style={styles.body}>
+        <Image source={require('../../assets/logo.png')}/>
 
         <TextInput
-          placeholder="Numero da mesa"
+          placeholder="Número da mesa"
           placeholderTextColor="#F0F0F0"
           style={styles.input}
           keyboardType="numeric"
@@ -49,6 +67,8 @@ export default function Dashboard(){
           <Text style={styles.buttonText}>Abrir mesa</Text>
         </TouchableOpacity>
 
+      </View>
+
     </SafeAreaView>
   )
 }
@@ -56,39 +76,42 @@ export default function Dashboard(){
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    paddingVertical: 15,
-    backgroundColor: '#1d1d2e'
+    paddingVertical: 30,
+    backgroundColor: '#1E0D0B'
   },
-  title:{
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: '#FFF',
-    marginBottom: 24,
+  body:{
+    width: '80%',
+    height: '47%',
+    marginTop: '15%',
+    alignItems: 'center',
+    justifyContent: 'space-evenly'
   },
+  
   input:{
     width: '90%',
     height: 60,
-    backgroundColor: '#101026',
+    borderWidth: 1,
+    borderColor: '#F08C2B',
     borderRadius: 4,
     paddingHorizontal: 8,
-    textAlign: 'center',
-    fontSize: 22,
+    textAlign: 'left',
+    fontSize: 15,
     color: '#FFF'
   },
   button:{
     width: '90%',
     height: 40,
-    backgroundColor: '#3fffa3',
+    backgroundColor: '#DF3821',
     borderRadius: 4,
-    marginVertical: 12,
+    marginVertical: 5,
     justifyContent: 'center',
     alignItems: 'center'
   },
   buttonText:{
     fontSize: 18,
-    color: '#101026',
+    color: '#fff',
     fontWeight: 'bold'
   }
 })

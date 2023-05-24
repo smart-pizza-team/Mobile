@@ -32,7 +32,6 @@ export default function SignIn(){
   return(
     <View style={styles.container}>
       <Image
-        style={styles.logo}
         source={require('../../assets/logo.png')}
       />
 
@@ -72,38 +71,39 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems: 'center',
-    backgroundColor: '#1d1d2e'
-  },
-  logo:{
-    marginBottom: 18
+    backgroundColor: '#1E0D0B'
   },
   inputContainer:{
     width: '95%',
+    height: '25%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 32,
+    paddingVertical: 20,
     paddingHorizontal: 14,
   },
   input:{
     width: '95%',
-    height: 40,
-    backgroundColor: '#101026',
+    height: "35%",
+    borderWidth: 1,
+    borderColor: '#F08C2B',
     marginBottom: 12,
     borderRadius: 4,
     paddingHorizontal: 8,
-    color: '#FFF'
+    color: '#FFF',
+    fontSize: 15
   },
   button:{
     width: '95%',
-    height: 40,
-    backgroundColor: '#3fffa3',
+    height: 45,
+    backgroundColor: '#DF3821',
     borderRadius: 4,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+
   },
   buttonText:{
    fontSize: 18, 
    fontWeight: 'bold',
-   color: '#101026'
+   color: '#FFF'
   }
 })
